@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(80, 88, 147);
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: rgb(79, 170, 197);
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: rgb(146, 212, 210);
+}
+
+.hero {
+    color: white;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    background: linear-gradient(to bottom, rgb(4, 4, 28), rgb(15, 15, 58));
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero {
+    animation: zoomIn 1.2s ease;
+}
+
+
+.highlight {
+    color: rgb(132, 209, 209);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: rgb(155, 204, 209);
+    color: rgb(39, 27, 56);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn:hover {
+    background: rgb(69, 158, 180);
+    transform: scale(1.05);
+}
+
+section {
+    padding: 100px 40px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 150px;
+    color: rgb(244, 249, 249);
+    font-size: 50px;
+}
+
+#internship h2 {
+    margin-top: 50px;
+}
+
+#skill h2 {
+    padding-top: 40px;
+}
+
+.card {
+    max-width: 800px;
+    margin: auto;
+    background: rgb(162, 162, 181);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.styled-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+}
+
+.styled-list li {
+    background: rgb(249, 250, 251);
+    border-left: 4px solid rgb(79, 70, 229);
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(51, 51, 51);
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.styled-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.styled-list strong {
+    color: rgb(79, 70, 229);
+    font-weight: 600;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skill-card {
+    background: rgb(224, 204, 251);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s;
+    font-size: 20px;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    color: rgb(63, 29, 118);
+}
+
+.intern-box {
+    max-width: 600px;
+    margin: auto;
+    background: rgb(228, 228, 239);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: rgb(182, 235, 246);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    font-size: 20px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    color: rgb(14, 8, 102);
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
